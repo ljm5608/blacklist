@@ -65,7 +65,7 @@ class BlackDomain:
         self.ipv6_set = ",".join(self.ipv6_set)
 
     def make_report_domain(self, dir, fname, date):
-        with open(f"{dir}/{fname}.csv", 'w', encoding='utf8') as f:
+        with open(f"{dir}/{fname}.csv", 'w', encoding='utf-sig-8') as f:
             f.write("ZONE,도메인 객체 이름,도메인 네임,IPv4,IPv6,설명\n")  # 맨위에 목록 작성
             f.write(f"E,{self.domain}_공격차단")
             f.write(f',{self.domain},"{self.ipv4_set}",{self.ipv6_set},{date}_악성메일유포차단\n')

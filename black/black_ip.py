@@ -23,7 +23,7 @@ class BlackIP:
                     print("올바른 값을 입력하세요")
                     break
 
-    def make_report(self, dir, fname, date):
+    def make_report_ip(self, dir, fname, date):
         with open(f"{dir}/{fname}.csv", 'w', encoding='utf-8-sig') as f:
             f.write("출발지 주소,출발지 포트,목적지 주소,목적지 포트,프로토콜,설명\n")  # 맨위에 목록 작성
             for i in self.ip_set:  # 데이터 줄마다 작성하기

@@ -34,7 +34,7 @@ class BlackNetwork:
                     break
             self.net_set_slice.append([i[:cnt-1], i[cnt:]])
 
-    def make_report(self, dir, fname, date):
+    def make_report_network(self, dir, fname, date):
         with open(f"{dir}/{fname}.csv", 'w', encoding='utf-8-sig') as f:
             f.write("ZONE,네트워크 이름,IP,설명\n")  # 맨위에 목록 작성
             for i in self.net_set_slice:  # 데이터 줄마다 작성하기

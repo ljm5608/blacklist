@@ -12,14 +12,13 @@ dir = "blacklist_report"
 if object == 1:
     fname = f"{date}_ip_blacklist"
     ip_black = BlackIP()
-    ip_black.make_report(dir, fname, date)
+    ip_black.make_report_ip(dir, fname, date)
 elif object == 2:
     fname = f"{date}_net_blacklist"
     net_black = BlackNetwork()
     net_black.slicing_net()
-    net_black.make_report(dir, fname, date)
+    net_black.make_report_network(dir, fname, date)
 elif object == 3:
     fname = f"{date}_domain_blacklist"
-    dom_black = BlackNetwork()
-    dom_black.slicing_net()
-    dom_black.make_report(dir, fname, date)
+    dom_black = BlackDomain()
+    dom_black.make_report_domain(dir, fname, date)
